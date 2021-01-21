@@ -1,7 +1,8 @@
 /*Настраиваем попап Big-screen*/
 const bigPicPopup = document.querySelector(".popup_big-pic");
-const popupCloseBtn = document.querySelector(".popup__close-button");
-const bigImageOpen = bigPicPopup.querySelector("img");
+const popupCloseBtn = bigPicPopup.querySelector(".popup__close-button");
+const imageCard = bigPicPopup.querySelectorAll("img");
+const bigImageOpen = bigPicPopup.querySelector(".popup__img-big");
 
 
 /* Открываем попап */
@@ -18,10 +19,11 @@ function closePopup(popup) {
 
 /*Настраиваем попап Big-screen*/
 function openImagePopup(e) {
-    const image = e.currentTarget.src;
-    bigImageOpen.src = image
+    bigImageOpen.src = e.target.src
     openPopup(bigPicPopup);
 }
+const image = document.getElementById('image_1')
+image.addEventListener('click', openImagePopup)
 
 
 popupCloseBtn.addEventListener("click", function () {
