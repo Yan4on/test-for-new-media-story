@@ -49,6 +49,7 @@ const cardTemplate = document.querySelector('#photo-gallery').content;
 /*Настраиваем попап Big-screen*/
 const bigPicPopup = document.querySelector(".popup_big-pic");
 const popupCloseBtn = bigPicPopup.querySelector(".popup__close-button");
+const photoGallery = document.querySelector(".photo-gallery")
 const imageCard = document.querySelector(".photo-gallery__item");
 const bigImageOpen = bigPicPopup.querySelector(".popup__img-big");
 const PicPopupContainer = document.querySelector(".photo-gallery__container");
@@ -78,7 +79,7 @@ function closePopup(popup) {
 }
 
 /*Настраиваем попап Big-screen*/
-cardContainer.onclick = function openImagePopup(e) {
+photoGallery.onclick = function openImagePopup(e) {
     bigImageOpen.src = e.target.src
     openPopup(bigPicPopup);
 }

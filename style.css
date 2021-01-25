@@ -13,12 +13,11 @@
 }
 
 .photo-gallery__container {
-  max-width: 50%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin: auto;
-  grid-gap: 16px;
+  grid-gap: 10px;
 }
 
 .photo-gallery__section-one {
@@ -168,8 +167,8 @@
 /* Шестерёнка */
 
 .mechanism {
-  max-width: 100%;
-  min-height: 480px;
+  max-width: 1086px;
+  min-height: 500px;;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.979);
 }
@@ -196,40 +195,75 @@
 }
 
 .mechanism__title {
-  max-width: 250px;
-
+  max-width: 350px;
+  padding-left: 14%;
 }
 
 .mechanism__container {
-  display: grid;
+  display: flex;
+  /* display: grid;
   grid-gap: 5px;
   justify-content: center;
-  grid: repeat(5, 75px) / repeat(12, 75px);
+  grid: repeat(8, 65px) / repeat(12, 70px) */
+}
+
+.mechanism__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* display: grid;
+  grid-gap: 5px;
+  justify-content: center;
+  grid: repeat(8, 65px) / repeat(12, 70px) */
 }
 
 .mechanism__pinion {
-  display: grid;
-  grid-area: 2 / 6 ;
+  max-width: 210px;
+  padding-left: 5%;
+  /* display: grid;
+  grid-area: 3 / 6 ; */
 }
 
-.mechanism__description:nth-last-child(7) {
-  grid-area: 5 / 5;
+.mechanism__description-left:nth-last-child(3) {
+  padding-top: 10%;
 }
-.mechanism__description:nth-last-child(6) {
-  grid-area: 4 / 10 ;
+.mechanism__description-left:nth-last-child(2) {
+ 
 }
-.mechanism__description:nth-last-child(5) {
-  grid-area: 2 / 10 ;
+.mechanism__description-left:nth-last-child(1) {
+  padding-bottom: 88px;
+  padding-right: 32%;
 }
-.mechanism__description:nth-last-child(3) {
-  grid-area: 1 / 9 ;
+.mechanism__description-right:nth-last-child(3) {
+  max-width: 380px;
+  /* text-align: right; */
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-left: 18%;
+  padding-top: 19%;
 }
-.mechanism__description:nth-last-child(2) {
-  grid-area: 1 / 4 ;
+.mechanism__description-right:nth-last-child(2) {
+  max-width: 213px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 17%;
+  padding-left: 39%;
+  text-align: right;
 }
-.mechanism__description:nth-last-child(1) {
-  grid-area: 3 / 4 ;
+
+.mechanism__description-right:nth-last-child(1) {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 17%;
+  padding-left: 39%;
+  text-align: right;
 }
+.mechanism__description {
+  margin: 0px;
+  text-align: right;
+  max-width: 350px;
+  padding: 0%;
+} 
 
 /* Slider__scroll */
 
