@@ -42,9 +42,8 @@
   // ];
 
 
-
 const cardContainer = document.querySelector('.elements');
-const cardTemplate = document.querySelector('#photo-gallery').content;
+// const cardTemplate = document.querySelector('#photo-gallery').content;
 
 /*Настраиваем попап Big-screen*/
 const bigPicPopup = document.querySelector(".popup_big-pic");
@@ -116,7 +115,7 @@ function removePopupHandler(popup) {
     popup.removeEventListener('click', closePopupEscOverLay);
 }
 
-initialCards.forEach(function (item) {
-    const newCard = createCard(item);
-    cardContainer.prepend(newCard);
-  })
+// initialCards.forEach(function (item) {
+//     const newCard = createCard(item);
+//     cardContainer.prepend(newCard);
+//   })
