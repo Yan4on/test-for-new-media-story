@@ -1,7 +1,7 @@
-$(document).ready(function() {
 
-    const slider = $('.slider');
-    
+    const slider= $('.slider');
+  
+
     function onSliderAfterChange(event, slick, currentSlide) {
       $(event.target).data('current-slide', currentSlide);
     }
@@ -12,9 +12,9 @@ $(document).ready(function() {
         currentSlickIndex = $currentSlider.data('current-slide') || 0;
       
       if (
-        // check when you scroll up
+        // проверка скролла вверх
         (deltaY < 0 && currentSlickIndex == 0) ||
-        // check when you scroll down
+        // проверка скролла вниз
         (deltaY > 0 && currentSlickIndex == $currentSlider.data('slider-length') - 1)
       ) {
         return;
@@ -35,9 +35,12 @@ $(document).ready(function() {
       // but the better way for performance is to set this data attribute on the div.slider in the markup
       $element.data('slider-length', $element.children().length);
     })
+    
+    
+
     .slick({
       infinite: false,
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
       dots: false,
       arrows: false
@@ -45,7 +48,6 @@ $(document).ready(function() {
     .on('afterChange', onSliderAfterChange)
     .on('wheel', onSliderWheel);
   
-  });
   
   slider.on('wheel', (function(e) {
     e.preventDefault();
@@ -56,4 +58,10 @@ $(document).ready(function() {
       $(this).slick('slickNext');
     }
   }));
+
+//
+
+
+  
+
   

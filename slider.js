@@ -15,6 +15,9 @@ const mechanismMobPinion = mechanismMob.querySelector(".mechanism-mob__pinion")
 const btnLeft =  mechanismMob.querySelector(".btm_left")
 const btnRight =  mechanismMob.querySelector(".btm_right")
 
+const rotate = document.querySelector(".rotate")
+
+
 
 if (typeof mechanismMobDescription.textContent !== "undefined") {
     mechanismMobDescription.textContent = sliderText[0];
@@ -71,18 +74,36 @@ event.preventDefault();
 event.stopPropagation();
 initialPoint=event.changedTouches[0];
 }, false);
-document.addEventListener('touchend', function(event) {
+mechanismMob.addEventListener('touchend', function(event) {
 event.preventDefault();
 event.stopPropagation();
 finalPoint=event.changedTouches[0];
 var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
 var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
-if (xAbs > 20 || yAbs > 20) {
+
+if (xAbs > 10 || yAbs > 10) {
 if (xAbs > yAbs) {
 if (finalPoint.pageX < initialPoint.pageX){
-    swipeLeft()}
+    swipeLeft()
+    mechanismMobPinion.classList.toggle("rotate")
+    // setTimer ()
+}
 else{
-    swipeRigth()}
+    swipeRigth()
+    mechanismMobPinion.classList.toggle("rotate")
+    
+    // setTimer ()
+}
     }
 }
 }, false);
+
+
+// function setTimer () {
+//     clickTimer = setInterval(function(){
+//         mechanismMobPinion.classList.remove('rotate')
+//                     },1700);
+// }
+    
+
+

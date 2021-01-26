@@ -231,6 +231,7 @@
   grid-area: 3 / 6 ; */
 }
 .mechanism__icon {
+  position: absolute;
   line-height: 100%;
   /* display: grid;
   grid-area: 3 / 6 ; */
@@ -238,16 +239,36 @@
 
 
 .mechanism-mob__pinion {
-    /* background: transparent; */
-    /* background-image: url("../../dev/test-for-new-media-story/images/Vector\ \(1\).png"),
-    url("../test-for-new-media-story/images/Vector\ \(1\).png");
-    /* background-size: contain; */
-    /* background-position: center; */ 
+
+    
 
 }
 
 
+@keyframes wiggle {
+  0% { transform: rotate(15deg); }
+ 80% { transform: rotate(-15deg); }
+ 85% { transform: rotate(35deg); }
+ 95% { transform: rotate(-35deg); }
+100% { transform: rotate(0deg); }
+}
+
+.mechanism__icon {
+  display: inline-block;
+  animation: wiggle 2.1s infinite;
+}
+
+.mechanism__icon:hover {
+  animation: none;
+}
+
+.rotate {
+  transform: rotate(60deg);
+  transition: all 1.5s;
+}
+
 .wrap {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -327,11 +348,13 @@
 
 }
 
-
+.slider__size {
+  max-width: 100%;
+}
 
 .slider {
   width:100%;
-  box-sizing: borde-box;
+  box-sizing: border-box;
 }
 
 .slider img {
@@ -438,10 +461,7 @@
 {
     pointer-events: none;
 }
-.slick-initialized .slick-slide
-{
-    display: block;
-}
+
 .slick-loading .slick-slide
 {
     visibility: hidden;
@@ -456,4 +476,9 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.slick-initialized .slick-slide
+{
+    display: flex;
 }
