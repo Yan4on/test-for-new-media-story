@@ -188,6 +188,12 @@
   }
 }
 
+@media screen and (max-width: 599px) {
+  .mechanism-mob__container {
+    margin: 13%;;
+  }
+}
+
 @media screen and (min-width: 599px) {
   .mechanism-mob {
     display: none;
@@ -219,9 +225,32 @@
 
 .mechanism__pinion {
   max-width: 210px;
-  padding-left: 5%;
+  display: flex;
+  /* position: relative; */
   /* display: grid;
   grid-area: 3 / 6 ; */
+}
+.mechanism__icon {
+  line-height: 100%;
+  /* display: grid;
+  grid-area: 3 / 6 ; */
+}
+
+
+.mechanism-mob__pinion {
+    /* background: transparent; */
+    /* background-image: url("../../dev/test-for-new-media-story/images/Vector\ \(1\).png"),
+    url("../test-for-new-media-story/images/Vector\ \(1\).png");
+    /* background-size: contain; */
+    /* background-position: center; */ 
+
+}
+
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mechanism__description-left:nth-last-child(3) {
