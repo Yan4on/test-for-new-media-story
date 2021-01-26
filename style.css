@@ -93,7 +93,7 @@
   background: transparent;
   border: none;
   outline: none;
-  background-image: url("././images/Close\ Icon.svg");
+  background-image: url("./././images/Close\ Icon.svg");
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -115,28 +115,28 @@
   background-color: rgba(0, 0, 0, 0.979);
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 721px) {
   .mechanism {
     display: none;
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 721px) {
   .mechanism-mob {
-    max-width: 599px;
+    max-width: 740px;
     min-height: 480px;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.979);
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 721px) {
   .mechanism-mob__container {
     margin: 13%;
   }
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 721px) {
   .mechanism-mob {
     display: none;
   }
