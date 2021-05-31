@@ -1,2 +1,10 @@
-# test-for-new-media-story
-Тестовое задание для ООО НЬЮ МЕДИА СТОРИ
+# Галерея изображений, слайдер 
+
+## Стек технологий: 
+- HTML
+- CSS
+- Grid
+- Java Script
+
+GitHubPages
+https://yan4on.github.io/test-for-new-media-story/
